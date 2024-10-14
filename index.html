@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayu Safitri</title>
-  
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
     <style>
         body {
             margin: 0;
@@ -103,13 +103,17 @@
             transform: scale(1.2); 
         }
         .content .btn {
-            background-color: #1500ff;
-            color: #ffffff;
+            display: inline-block;
+            margin-top: 5px;
             padding: 10px 20px;
-            border-radius: 5px;
+            background-color: #1500ff;
+            color: #fff;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer; 
             transition: background-color 0.3s;
+            justify-content: justify;
         }
         .content .btn:hover {
             background-color: #317ced;
@@ -141,7 +145,6 @@
             }
         }
 
-      
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -161,15 +164,143 @@
             }
         }
 
-        
+        .about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            padding: 20px;
+        }
 
-        
+        .about-content {
+            display: flex;
+            flex-direction: row; 
+            align-items: flex-start; 
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px; 
+        }
+
+        .about-content img {
+            border: none;
+            border-radius: 10px;
+            margin-right: 60px; 
+            width: 300px; 
+            height: auto;
+        }
+
+        .about-text {
+            max-width: 600px;
+            margin-left: 20px; 
+        }
+
+        .about-text h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .about-text h2 span {
+            color: #eb6ca9;
+        }
+
+        .about-text h3 {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1b00e4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer; 
+            transition: background-color 0.3s;
+        }
+
+        .read-more-btn:hover {
+            background-color: #4957eb;
+        }
+
+        .divider {
+            width: 100%;
+            height: 10px;
+            background-color: #ccc;
+            margin: 50px auto;
+        }
+
+       
+        #skills {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #001F3F, #87A2FF, #B7E0FF);
+            text-align: center;
+        }
+        #skills .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #skills h1 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #0501fd;
+        }
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .skill {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            width: 45%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skill:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #333333;
+        }
+        .progress {
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #00aaff;
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+        .skill .progress-bar {
+            width: var(--skill-level);
+        }
+        @media (max-width: 768px) {
+            .skill {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
-    
-  
     <div class="navbar">
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
@@ -178,7 +309,7 @@
         <a href="#contact">Contact</a>
     </div>
 
-   
+    
     <div class="container" id="home">
         <div class="content">
             <h1>Hello, It's Me</h1>
@@ -186,7 +317,7 @@
             <h2>And I'm a <span style="color: #0008ff;">student at SMKN 24 Jakarta</span></h2>
             <p>I am from SMKN 24 Jakarta, and my major is Software Engineering.</p>
             <div class="social-icons">
-                <a href="https://www.instagram.com/invites/contact/?igsh=18ik0bysxzbad&utm_content=ngy5n1w" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/username" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/ayu-safitri-0a8825329" target="_blank" aria-label="LinkedIn">
@@ -199,58 +330,142 @@
             <a class="btn" href="path/to/your-cv.pdf" download>Find more about me</a>
         </div>
         <div class="profile-pic">
-            <img alt="Profile picture" src="ayu.jpg" />
+            <img src="ayu.jpg" alt="ayu safitri amry">
         </div>
     </div>
 
-
-    <div id="about" class="section">
-        <h1 class="section-title">About Me</h1>
-        <p>I am a passionate student pursuing Software Engineering at SMKN 24 Jakarta. I love coding and building applications that solve real-world problems.</p>
-    </div>
-
-
-    <div id="skills" class="section">
-        <h1 class="section-title">Skills</h1>
-        <p>My skill set includes HTML, CSS, JavaScript, PHP and basic knowledge of Java. I enjoy working on web development projects and improving my frontend skills.</p>
-    </div>
-
-
-    <div id="portfolio" class="section">
-        <h1 class="section-title">Portfolio</h1>
-        <p>Check out some of my latest projects and the web applications I have worked on. I aim to continuously learn and grow as a developer.</p>
-    </div>
+    <div class="divider"></div>
 
     
-    <div id="contact" class="section">
-        <h1 class="section-title">Contact</h1>
-        <p>If you would like to collaborate or have any questions, feel free to reach out to me through my social media channels or send me an email.</p>
+    <div id="about" class="about-section">
+        <div class="about-content">
+            <img src="ayu.jpg" alt="ayu safitri amry" style="width:300px;height:400px;">
+            <div class="about-text">
+                <h2>About <span>Me</span></h2>
+                <h3>And I'm a student at SMKN 24 Jakarta</h3>
+                <p>
+                    Saya adalah seorang siswa yang berdedikasi dan bersemangat di SMKN 24 Jakarta, jurusan Rekayasa Perangkat Lunak. Saya memiliki ketertarikan yang mendalam dalam bidang teknologi informasi, khususnya dalam pengembangan perangkat lunak dan aplikasi web. Selama studi saya, saya telah terlibat dalam berbagai proyek yang menantang yang telah membantu saya mengembangkan keterampilan teknis dan kemampuan problem-solving.
+                </p>
+                <a class="read-more-btn" href="readmore.html">Read More</a>
+            </div>
+        </div>
     </div>
 
+   
+    <div class="divider"></div>
+    <div id="skills" class="section">
+
+        <div class="container">
+            <h1 class="section-title">My Skills</h1>
+            <div class="skills">
+                <div class="skill" style="--skill-level: 90%;">
+                    <div class="skill-name">
+                        <span>PHP</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill" style="--skill-level: 90%;">
+                    <div class="skill-name">
+                        <span>HTML CSS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill" style="--skill-level: 80%;">
+                    <div class="skill-name">
+                        <span>Adobe Illustrator</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill" style="--skill-level: 80%;">
+                    <div class="skill-name">
+                        <span>Javascript</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill" style="--skill-level: 75%;">
+                    <div class="skill-name">
+                        <span>Figma</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill" style="--skill-level: 75%;">
+                    <div class="skill-name">
+                        <span>Mysql</span>
+                        <span>88%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill" style="--skill-level: 95%;">
+                    <div class="skill-name">
+                        <span>Java</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill" style="--skill-level: 85%;">
+                    <div class="skill-name">
+                        <span>Kotlin</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+   
 
     <script>
-        function isInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom - 150 <= (window.innerHeight || document.documentElement.clientHeight) && 
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-
-        function handleScroll() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                if (isInViewport(section)) {
+        window.addEventListener('scroll', function () {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function (section) {
+                var sectionTop = section.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 100) {
                     section.classList.add('active');
                 }
             });
-        }
 
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', handleScroll);
+            
+            var skillsSection = document.getElementById('skills');
+            var progressBars = document.querySelectorAll('.progress-bar');
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        progressBars.forEach(function(bar) {
+                            bar.style.width = bar.parentElement.parentElement.style.getPropertyValue('--skill-level');
+                        });
+                        observer.unobserve(skillsSection);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(skillsSection);
+        });
     </script>
-
 </body>
 </html>
