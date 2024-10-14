@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ayu Safitri</title>
+    
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #B7E0FF, #87A2FF, #001F3F);
+            color: #020202;
+        }
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 50px;
+            display: flex;
+            z-index: 1000;
+            opacity: 0; 
+            animation: fadeIn 1.5s ease-in forwards 1s;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s;
+            margin-left: 25px;
+            padding: 5px 10px;
+        }
+        .navbar a:hover,
+        .navbar a.active {
+            color: #0D92F4;
+        }
+        .about-me-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 150px auto 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+            animation: fadeIn 1.5s ease-in forwards 1s;
+        }
+        .about-me-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #2704f3;
+        }
+        .about-me-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ee6abb;
+        }
+        .about-me-section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .sections-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .section-box {
+            background-color: #f0f8ff;
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    
+        .section-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #2704f3;
+        }
+        .section-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section-box ul li {
+            font-size: 1em;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .section-box ul li i {
+            margin-right: 10px;
+            color: #0D92F4;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #1500ff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #317ced;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                right: 20px;
+                top: 10px;
+                flex-direction: column;
+            }
+            .navbar a {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            .about-me-section {
+                padding: 50px 20px;
+            }
+            .about-me-section h1 {
+                font-size: 2.5em;
+            }
+            .about-me-section h2 {
+                font-size: 1.8em;
+            }
+            .about-me-section p {
+                font-size: 1em;
+            }
+            .section-box {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a class="active" href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="about-me-section" id="about">
+        <h1>About Me</h1>
+        <h2>Ayu Safitri</h2>
+        <p>
+            Saya adalah seorang siswa yang berdedikasi dan bersemangat di SMKN 24 Jakarta, jurusan Rekayasa Perangkat Lunak. Saya memiliki ketertarikan yang mendalam dalam bidang teknologi informasi, khususnya dalam pengembangan perangkat lunak dan aplikasi web. Selama studi saya, saya telah terlibat dalam berbagai proyek yang menantang yang telah membantu saya mengembangkan keterampilan teknis dan kemampuan problem-solving.
+        </p>
+        
+        <div class="sections-container">
+            <div class="section-box">
+                <img src="f.jpeg" alt="ayu safitri amry" style="width:200px;">
+                <h3>Hobi</h3>
+                <ul>
+                    <li><i class="fas fa-laptop-code"></i>Mengoding dan mempelajari bahasa pemrograman baru.</li>
+                    <li><i class="fas fa-gamepad"></i>Main game seperti mobile legends dan roblox hehe.</li>
+                    <li><i class="fas fa-book-reader"></i>Membaca buku bergenre fantasy khususnya karya Tere Liye hehe dan Novel favorite saya dari tere Liye yang bergenre fantasy adalah Bumi Series.</li>
+                    <li><i class="fas fa-music"></i>Mendengarkan music saat ngoding membuat semangat saya semakin naik dan tentunya mood sangat terjaga.</li>
+                    <li><i class="fas fa-film"></i>Menonton film khususnya yang bergenre fantasy.. ilysm with all about fantasy hehe, film favoriteku harry potter, narnia, the hobbit, maze runner, lucifer, stranger things.</li>
+                </ul>
+            </div>
+            
+           
+            <div class="section-box">
+                <img src="eye.jpeg" alt="waiting me in the future" style="width:200px;">
+                <h3>Cita-cita</h3>
+                <ul>
+                    <li><i class="fas fa-user-tie"></i>Menjadi seorang pengembang perangkat lunak yang handal dan inovatif.</li>
+                    <li><i class="fas fa-app-store"></i>Membuat aplikasi yang dapat meningkatkan produktivitas dan kualitas hidup masyarakat.</li>
+                    <li><i class="fas fa-graduation-cap"></i>Terus belajar dan berkembang dalam bidang teknologi terbaru.</li>
+                </ul>
+            </div>
+        </div>
+
+        <a class="back-button" href="index.html">Back</a>
+    </div>
+    
+</body>
+</html>
